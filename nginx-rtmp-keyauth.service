@@ -1,0 +1,9 @@
+[Unit]
+Description=Key-based auth-backend for nginx-rtmp
+# After=nginx-rtmp.service
+
+[Service]
+ExecStart=/usr/local/bin/nginx-rtmp-keyauth /etc/nginx-rtmp-keyauth.key
+
+[Install]
+WantedBy=multi-user.target
