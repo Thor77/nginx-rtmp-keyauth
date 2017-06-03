@@ -30,7 +30,10 @@ func authHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	key := strings.TrimRight(strings.TrimRight(string(keyfile), "\n"), "\r")
 	if givenKey := r.FormValue("key"); givenKey != key {
+		log.Printf("Failed authentication attempt from %s", r.RemoteAddr)
 		http.Error(w, "", http.StatusForbidden)
+	} else {
+		log.Printf("Successfull authentication from %s", r.RemoteAddr)
 	}
 
 }
