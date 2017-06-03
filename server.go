@@ -43,5 +43,7 @@ func main() {
 	r.HandleFunc("/", indexHandler)
 	r.HandleFunc("/auth", authHandler)
 	http.Handle("/", r)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	address := ":8080"
+	log.Printf("Listening on %s", address)
+	log.Fatal(http.ListenAndServe(address, nil))
 }
