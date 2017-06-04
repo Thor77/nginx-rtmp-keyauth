@@ -18,7 +18,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func authHandler(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodPost {
+	if r.Method != http.MethodPost || r.FormValue("call") != "publish" {
 		http.Error(w, "", http.StatusNotImplemented)
 		return
 	}
