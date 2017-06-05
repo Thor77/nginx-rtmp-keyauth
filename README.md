@@ -5,8 +5,8 @@ Very simple auth-script for [nginx-rtmp-module](https://github.com/arut/nginx-rt
 
 Installation
 ============
-* Build the binary `go build server.go` or download from [Releases]()
-* Install binary `mv server /usr/bin/nginx-rtmp-keyauth`
+* Build the binary `go build server.go` or download from [Releases](https://github.com/Thor77/nginx-rtmp-keyauth/releases)
+* Install binary `cp server /usr/bin/nginx-rtmp-keyauth`
 * Install systemd service `cp nginx-rtmp-keyauth.service /etc/systemd/system/`
 
 Usage
