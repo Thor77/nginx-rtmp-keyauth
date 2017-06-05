@@ -42,6 +42,7 @@ func authHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	if len(os.Args) >= 2 {
 		keyLocation = os.Args[1]
+		log.Printf("Set key location to %s", keyLocation)
 	}
 	r := mux.NewRouter()
 	r.HandleFunc("/", indexHandler)
